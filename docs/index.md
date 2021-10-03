@@ -92,7 +92,7 @@
                     <span>Chunjuan</span>
                     <span>春卷</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/3447/3447898.png"/ alt="roll">
+                <img src="https://cdn-icons-png.flaticon.com/512/3447/3447898.png" alt="roll">
                 <p>$8,00</p>
             </div>
     
@@ -101,7 +101,7 @@
                     <span>Miantiao</span>
                     <span>面条</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/1623/1623675.png"/ alt="noodle">
+                <img src="https://cdn-icons-png.flaticon.com/512/1623/1623675.png" alt="noodle">
                 <p>$22,00</p>
             </div>
     
