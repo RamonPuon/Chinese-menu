@@ -1,37 +1,166 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet"> 
+    <title>Chinese Menu</title>
+    <style>
+        .body{
+            font-family: 'Ephesis', cursive;
+        }
 
-You can use the [editor on GitHub](https://github.com/RamonPuon/Chinese-menu/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, minmax(100px, auto));
+            background: pink;
+        }
+        
+        .item{
+            display: grid;
+            grid-column: 2/5;
+            grid-row: 3/4;
+            background: pink;
+            grid-template-columns: subgrid;
+            grid-template-rows: repeat(3, minmax(80px,auto));
+            gap: 12px;
+        }
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+        .sub-item{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3,minmax(80px,auto));
+            background: papayawhip;
+            justify-items: center;
+            align-items: center; 
+            border-radius: 8px;           
+        }
 
-### Markdown
+        .sub-item:nth-child(2n+1) {
+            background: lightyellow;
+        }
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        .sub-item img{
+            object-fit: cover;
+            width: 100px;
+        }
+        .sub-item > p{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-```markdown
-Syntax highlighted code block
+        .sub-item > p span:first-child{
+            font-size: 20px;
+        }
 
-# Header 1
-## Header 2
-### Header 3
+        @media (max-width: 640px){
+            .grid{
+                grid-template-columns: 80px 1fr 80px;
+            }
+            .item{
+                grid-column: 2/3;
+                grid-row: 3/4;
+                grid-template-columns: subgrid;
+            }
+        }
 
-- Bulleted
-- List
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <h3 class="title">Chinese menu</h3>
 
-[Link](url) and ![Image](src)
-```
+        <div class="item">
+            <div class="sub-item">
+                <p>
+                    <span>Jiaozi</span>
+                    <span>饺子</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/1690/1690702.png" alt="jiazi">
+                <p>$15,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Chunjuan</span>
+                    <span>春卷</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/3447/3447898.png"/ alt="roll">
+                <p>$8,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Miantiao</span>
+                    <span>面条</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/1623/1623675.png"/ alt="noodle">
+                <p>$22,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Baozi</span>
+                    <span>包子</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/1357/1357304.png" alt="baozi">
+                <p>$12,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Mifan</span>
+                    <span>米饭</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/541/541705.png" alt="rice">
+                <p>$8,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Yuebing</span>
+                    <span>月饼</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/3447/3447998.png" alt="cake">
+                <p>$6,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Cha</span>
+                    <span>茶</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/3504/3504747.png" alt="tea">
+                <p>$7,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Huangjiu</span>
+                    <span>黄酒</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/3766/3766698.png" alt="drink">
+                <p>$15,00</p>
+            </div>
+    
+            <div class="sub-item">
+                <p>
+                    <span>Sachima</span>
+                    <span>沙琪玛</span>
+                </p>
+                <img src="https://cdn-icons-png.flaticon.com/512/890/890082.png" alt="sachima">
+                <p>$12,00</p>
+            </div>
+    
+        </div>
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/RamonPuon/Chinese-menu/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+    </div>
+</body>
+</html>
