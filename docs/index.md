@@ -67,7 +67,10 @@
                 grid-template-columns: subgrid;
             }
         }
-
+        @import "{{ site.theme}}";
+        header{
+        display: none;
+        }
 
 
     </style>
