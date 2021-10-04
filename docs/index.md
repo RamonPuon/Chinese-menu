@@ -10,7 +10,7 @@
     <title>Chinese Menu</title>
     <style>
         
-        @import "{{ site.theme}}";
+        @import "{{site.theme}}";
         header{
         display: none;
         }
