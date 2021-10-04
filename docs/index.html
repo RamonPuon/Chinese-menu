@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,14 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
-    
+    <title>Chinese Menu</title>
     <style>
-        
-        @import "{{site.theme}}";
-        h1{
-        display: none;
-        }
-        
         .body{
             font-family: 'Quicksand', sans-serif;
             margin: 0;
@@ -23,35 +18,42 @@
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             grid-template-rows: repeat(4, minmax(100px, auto));
-            background: pink;
-            margin:0;
-            border-radius: 16px;
+            background:  #28b9bb  ;
         }
         
         .item{
             display: grid;
             grid-column: 2/5;
             grid-row: 3/4;
-            background: pink;
+            background:   #28b9bb  ;
             grid-template-columns: subgrid;
             grid-template-rows: repeat(3, minmax(80px,auto));
             gap: 12px;
+        }
+
+        .sub-item p{
+            color: white;
         }
 
         .sub-item{
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: repeat(3,minmax(80px,auto));
-            background: papayawhip;
+            background:  #7a7c83 ;
             justify-items: center;
             align-items: center; 
-            border-radius: 8px;           
+            border-radius: 8px;  
+            cursor: pointer;         
         }
 
         .sub-item:nth-child(2n+1) {
-            background: lightyellow;
+            background:  darkcyan ;
         }
-
+        .image{
+            /*Al agregarle un contenedor a las imágenes se logró simular una "animación"*/
+            display: grid;
+            place-items: center;
+        }
         .sub-item img{
             object-fit: cover;
             width: 100px;
@@ -75,7 +77,12 @@
                 grid-row: 3/4;
                 grid-template-columns: subgrid;
             }
-        
+        }
+
+        .sub-item:hover .image{
+            width: 95%;
+            height: 95%;
+        }
 
 
     </style>
@@ -90,7 +97,9 @@
                     <span>Jiaozi</span>
                     <span>饺子</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/1690/1690702.png" alt="jiazi">
+                <div class="image">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1690/1690702.png" alt="jiazi">
+                </div>
                 <p>$15,00</p>
             </div>
     
@@ -99,7 +108,7 @@
                     <span>Chunjuan</span>
                     <span>春卷</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/3447/3447898.png" alt="roll">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/3447/3447898.png"/ alt="roll"></div>
                 <p>$8,00</p>
             </div>
     
@@ -108,7 +117,7 @@
                     <span>Miantiao</span>
                     <span>面条</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/1623/1623675.png" alt="noodle">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/1623/1623675.png"/ alt="noodle"></div>
                 <p>$22,00</p>
             </div>
     
@@ -117,7 +126,7 @@
                     <span>Baozi</span>
                     <span>包子</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/1357/1357304.png" alt="baozi">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/1357/1357304.png" alt="baozi"></div>
                 <p>$12,00</p>
             </div>
     
@@ -126,7 +135,7 @@
                     <span>Mifan</span>
                     <span>米饭</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/541/541705.png" alt="rice">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/541/541705.png" alt="rice"></div>
                 <p>$8,00</p>
             </div>
     
@@ -135,7 +144,7 @@
                     <span>Yuebing</span>
                     <span>月饼</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/3447/3447998.png" alt="cake">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/3447/3447998.png" alt="cake"></div>
                 <p>$6,00</p>
             </div>
     
@@ -144,7 +153,7 @@
                     <span>Cha</span>
                     <span>茶</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/3504/3504747.png" alt="tea">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/3504/3504747.png" alt="tea"></div>
                 <p>$7,00</p>
             </div>
     
@@ -153,7 +162,7 @@
                     <span>Huangjiu</span>
                     <span>黄酒</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/3766/3766698.png" alt="drink">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/3766/3766698.png" alt="drink"></div>
                 <p>$15,00</p>
             </div>
     
@@ -162,7 +171,7 @@
                     <span>Sachima</span>
                     <span>沙琪玛</span>
                 </p>
-                <img src="https://cdn-icons-png.flaticon.com/512/890/890082.png" alt="sachima">
+                <div class="image"><img src="https://cdn-icons-png.flaticon.com/512/890/890082.png" alt="sachima"></div>
                 <p>$12,00</p>
             </div>
     
