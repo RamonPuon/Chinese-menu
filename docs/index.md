@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,10 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet"> 
     <title>Chinese Menu</title>
     <style>
+        
         @import "{{ site.theme}}";
         header{
         display: none;
         }
+        
         .body{
             font-family: 'Ephesis', cursive;
         }
