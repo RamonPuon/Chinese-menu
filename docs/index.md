@@ -23,6 +23,7 @@
             grid-template-rows: repeat(4, minmax(100px, auto));
             background: pink;
             margin:0;
+            border-radius: 16px;
         }
         
         .item{
