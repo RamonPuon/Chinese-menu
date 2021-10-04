@@ -8,7 +8,7 @@
     <style>
         
         @import "{{site.theme}}";
-        header{
+        h1{
         display: none;
         }
         @import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
